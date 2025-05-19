@@ -28,3 +28,17 @@ if ! grep -Fxq 'eval "$(starship init zsh)"' ~/.zshrc; then
     echo >> ~/.zshrc
     echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 fi
+
+if ! grep -Fq 'FNM_PATH="/root/.local/share/fnm"' ~/.zshrc; then
+cat <<'EOF' >> ~/.zshrc
+
+# fnm
+FNM_PATH="/root/.local/share/fnm"
+if [ -d "\$FNM_PATH" ]; then
+  export PATH="/root/.local/share/fnm:\$PATH"
+  eval "\`fnm env\`"
+fi
+EOF
+fi
+
+
