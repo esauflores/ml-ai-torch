@@ -11,7 +11,6 @@ sudo apt install bat -y
 git clone https://github.com/fdellwing/zsh-bat.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-bat
 
 # edit plugins=() in ~/.zshrc
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-bat)
 sed -i 's/^plugins=(.*)$/plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-bat)/' ~/.zshrc
 
 # direnv
