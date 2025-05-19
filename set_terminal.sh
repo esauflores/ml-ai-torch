@@ -29,6 +29,3 @@ if ! grep -Fxq 'eval "$(starship init zsh)"' ~/.zshrc; then
     echo >> ~/.zshrc
     echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 fi
-
-
-omz reload
