@@ -34,9 +34,9 @@ cat <<'EOF' >> ~/.zshrc
 
 # fnm
 FNM_PATH="/root/.local/share/fnm"
-if [ -d "\$FNM_PATH" ]; then
+if [ -d "$FNM_PATH" ]; then
   export PATH="/root/.local/share/fnm:\$PATH"
-  eval "\`fnm env\`"
+  eval "`fnm env`"
 fi
 EOF
 fi
