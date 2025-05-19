@@ -23,10 +23,12 @@ if ! grep -Fxq 'eval "$(direnv hook zsh)"' ~/.zshrc; then
 fi
 
 # starship rs
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 if ! grep -Fxq 'eval "$(starship init zsh)"' ~/.zshrc; then
     echo >> ~/.zshrc
     echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 fi
 
+
+omz reload
